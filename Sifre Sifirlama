@@ -1,0 +1,51 @@
+public class reset_password extends mainfiratbank{
+JFrame frame;
+private JTextField eskisifre;
+private JTextField yenisifre;
+
+public static void main (String[] args){
+EventQueue.invokeLater(new Runnable(){
+public void run(){
+try{
+reset_password window= new reset_password();
+window.frame.setVisible(true);
+}
+catch(Exception e ) {
+e.printStackTrace();
+}}}
+};
+}
+public reset_password (){
+initialize();}
+
+public void initialize (){
+panel.setLayout(null);
+
+eskişifre= new JTextField();
+eskişifre.setBounds(150,83,176,20);
+panel.add(eskişifre);
+eskişifre.setColumns(10);
+
+JLabel lblNewLabel = new JLabel("Eski Şifreniz");
+lblNewLabel.setBounds(35,125,8614);
+panel.add(lblYeniŞifreniz);
+
+yenişifre = new JTextField();
+yenişifre.setColumns(10);
+yenişifre.setBounds(150,122,176,20);
+panel.add(yenişifre);
+
+JButton btnNewButton = new JButton("");
+btnNewButton.setBounds(150,186,176,41);
+panel.add(btnNewButton);
+btnNewButton.addActionListener(new ActionListener(){
+
+@Override 
+public void actionPerformed (ActionEvent arg0) {
+String get_oldpass=eskişifre.getText();
+Streing get_newpass=yenişifre.getText();
+
+reset_pass(veriler[2],getolpass,getnewpass);
+}});}}
+
+ 
