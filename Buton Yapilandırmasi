@@ -1,0 +1,53 @@
+public mainfiratbank(){
+    super(getDatabase_username(),getDatabase_password(),getDatabase_name,getDatabase_tablename());
+    initialize();
+}
+
+private void initialize(){
+frame = new JFrame("bağlanılan hesap:"+veriler[2]);
+frame.setForeground(Color.RED);
+frame.setBounds(100,100,450,300);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+JPanel panel = new JPanel();
+frame.getContentPane().add(panel,BorderLayout.CENTER);
+panel.setLayout(null);
+
+JLabel getName= new JLabel(veriler[0]);
+getName.setBounds(249,27,118,24);
+panel.add(getName);
+
+JLabel getSurname= new JLabel(veriler[1]);
+getName.setBounds(294,73,84,14);
+panel.add(getSurname);
+
+JLabel getUsername= new JLabel(veriler[2]);
+getName.setBounds(294,127,98,14);
+panel.add(getUsername);
+
+JLabel getPassword= new JLabel(veriler[3]);
+getName.setBounds(123,27,98,14);
+panel.add(getPassword);
+
+JLabel lblNewLabel= new JLabel("ADI");
+lblNewLabel.setBounds(123,73,98,14);
+panel.add(lblNewLabel);
+
+JLabel lblNewLabel_1= new JLabel("SOYADI");
+lblNewLabel.setBounds(123,73,98,14);
+panel.add(lblNewLabel_1);
+
+JLabel lblNewLabel_2= new JLabel("KULLANICI ADI");
+lblNewLabel.setBounds(123,127,134,14);
+panel.add(lblNewLabel_2);
+
+JLabel lblNewLabel_3= new JLabel("SİFRE");
+lblNewLabel.setBounds(123,174,98,14);
+panel.add(lblNewLabel_3);
+
+JButton btnNewButton = new JButton("SİFRE");
+btnNewButton.setBounds(202,218,118,32);
+panel.add(btnNewButton);
+
+
+
