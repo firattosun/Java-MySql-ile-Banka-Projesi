@@ -1,0 +1,59 @@
+import java.awt.EventQoueue;
+public class guı extends veri_tabanı{
+
+	private JFrame frmFratbankGiriEkran;
+	private JTextField input_username;
+	private JPassworldField password_input;
+
+
+public static void main(String[] args){
+    EventQueue.invokeLater(new Runnable(){
+	public void run(){
+		try{
+		guı window= new guı();
+		window.frmFratbankGiriEkran.setVisible(true);
+		    } catch(Exception e){
+			e.printStackTrace();
+			}
+			  }
+ 			   }};
+		    }
+
+public guı(){
+	super("root","","bank_database","account_info");
+	initialize();
+}
+
+private void initialize(){
+	password_input = new JPasswordField();
+	password_input.setBounds(177,281,199,20);
+	panel.add(password_input);
+	frmFratbankGiriEkran  = new JFrame();
+	JButton login_button= new JButton("G\u0130R\u0130\u015E");
+	login_button.setBounds(288,324,89,23);
+	panel.add(login_button);
+	login_button.addActionListener(new ActionListener(){
+
+	@Override
+	public void actionPerformed(ActionEvent e){
+	System.out.println("sorgu gönderildi.");
+
+	if(access_control(input_username.getText(),password_input.getText()) == true){
+	    JOptionPane.showMessasgeDiaolg(null,"Hesap bulundu."+veriler[0]+veriler[1],"başarılı",3);
+	    mainfiratbank firbank=new mainfiratbank();
+	    firbank.frame.setVisible(true);
+
+	}
+	  else{
+	JOptionPane.showMessageDialog(null,"hesap bulunamadı","Başarısız",0);
+}
+}});
+	JLabel lb1NewLabel_2 new JLabel("BANKA VER\u0130TABANINA HOŞGELDİNİZ");
+	lb1NewLabel_2 .setForeground(color.WHITE);
+	lb1NewLabel_2 .setFront(new Font("Tahoma",font.bold,15));
+	lb1NewLabel_2 .setBounds(85,11,291,39);
+	panel.add(lb1NewLabel_2 );
+	panel.add(lb1NewLabel_2 );
+	frmFratbankGiriEkran.setBounds(100,100,480,408);
+	frmFratbankGiriEkran.setDefaultCloseOperation(JFrame.EXIT__ON_CLOSE);
+}}
